@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+}
+
+#controls {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#certificate {
+    width: 60%;
+    height: 500px;
+    border: 2px solid #ddd;
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+    position: relative;
+}
+
+.resizable {
+    position: absolute;
+    cursor: move;
+}
+
+.resizable .text {
+    font-family: "Times New Roman", serif;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+label, input, select {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for form */
+input[type="text"], select, input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+}

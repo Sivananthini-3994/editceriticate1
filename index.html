@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Generator</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <div class="container">
+        <!-- Form Section -->
+        <div id="controls">
+            <label for="name">Enter Name:</label>
+            <input type="text" id="name" placeholder="Enter Name" />
+
+            <label for="course">Course:</label>
+            <input type="text" id="course" disabled />
+
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" disabled />
+
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" disabled />
+
+            <label for="background">Background:</label>
+            <select id="background">
+                <option value="background1.jpeg">Classic Blue Theme</option>
+                <option value="background2.jpeg">Elegant White Theme</option>
+                <option value="background3.jpeg">Golden Border Theme</option>
+                <option value="background4.jpeg">Dark Professional Theme</option>
+            </select>
+
+            <label for="pdf-size-selector">PDF Size:</label>
+            <select id="pdf-size-selector">
+                <option value="1600x800">1600 x 800</option>
+                <option value="a4">A4 Size</option>
+            </select>
+
+            <button id="download-btn">Download Certificate</button>
+        </div>
+
+        <!-- Certificate Preview Section -->
+        <div id="certificate" style="background-image: url('background1.jpeg');">
+            <!-- Resizable and Draggable Logo -->
+            <div class="resizable" style="top: 20px; left: 20px; width: 100px;">
+                <img src="download.png" alt="Logo" style="width: 100%; height: auto;">
+            </div>
+
+            <!-- Resizable and Draggable Text -->
+            <div class="resizable" contenteditable="true" id="certificate-title" style="top: 50px; left: 300px; font-size: 36px;" data-font-size="36">
+                CERTIFICATE
+            </div>
+            <div class="resizable" contenteditable="true" id="certificate-subtitle" style="top: 120px; left: 280px; font-size: 24px;" data-font-size="24">
+                OF COMPLETION
+            </div>
+            <div class="resizable" contenteditable="true" id="certificate-text" style="top: 200px; left: 150px; font-size: 18px;" data-font-size="18">
+                This certificate is presented to
+            </div>
+            <div class="resizable" contenteditable="true" id="certificate-name" style="top: 250px; left: 320px; font-size: 36px;" data-font-size="36">
+                SOORYA
+            </div>
+            <div class="resizable" contenteditable="true" id="certificate-course" style="top: 320px; left: 200px; font-size: 18px;" data-font-size="18">
+                has successfully completed the course 'MOBILE APP DEVELOPMENT'
+            </div>
+            <div class="resizable" contenteditable="true" id="certificate-dates" style="top: 370px; left: 220px; font-size: 18px;" data-font-size="18">
+                with 85% held by SharpenedMind from 2023-06-15 to 2023-12-15.
+            </div>
+            <div class="resizable" contenteditable="true" id="certificate-signer" style="top: 420px; left: 320px; font-size: 18px;" data-font-size="18">
+                DURGA DEVI
+            </div>
+            <div class="resizable" contenteditable="true" id="certificate-position" style="top: 450px; left: 280px; font-size: 16px;" data-font-size="16">
+                PRESIDENT - SHARPENEDMIND
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to external JS file -->
+</body>
+</html>
